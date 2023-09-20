@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+
+</head>
+<body class="height: 100%!important;">
+    <nav id="Navbarr" class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">ITWD6.408</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="forms.html">Forms</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="xmljson.html">XML/JSON</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="js.html">Javascript</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="research.html">Research</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      
+
+  <section id="formss" class="container-fluid">
+    <div class="row accordion accordion-flush" id="accordionFlushExample">
+      <div class="col-lg-2 col-sm-12">
+        <div class="row accordion-item">
+          <div class="col-sm-6 col-xs-6 col-lg-12">
+            <h2 class="accordion-header" id="flush-headingOne">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#Googleform" aria-expanded="true" aria-controls="flush-collapseOne">
+                Google Form
+              </button>
+            </h2>
+          </div>
+          <div class="col-sm-6 col-xs-6 col-lg-12">
+            <h2 class="accordion-header" id="flush-headingTwo">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#HTMLform" aria-expanded="true" aria-controls="flush-collapseTwo">
+                HTML form
+              </button>
+            </h2>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-10 col-sm-12 col-xs-12">
+          <div class="accordion-item">
+            <div id="Googleform" class="accordion-collapse collapse show no-transition" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body">
+                <iframe width="100%" height="800" src="https://docs.google.com/forms/d/e/1FAIpQLSfWLJTlmlyjCNY1gqSBP734Hqi5IRIC8N44tTlNrCgwL_-xUg/viewform?embedded=true" frameborder="0"></iframe>
+              </div>
+            </div>
+          </div>
+        <div class="accordion-item">
+          
+          <div id="HTMLform" class=" accordion-collapse collapse ps-5 pe-5 no-transition" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+            <div class="card card-body accordion-body">
+              <form method="post" action="https://danieldangs.com/itwd6408/handle_form.php">
+                
+                <h3 class="mb-3">Name:</h3>
+                <div class="row mb-3">
+                  <div style="display:flex; align-items: center;" class="col-sm-2 col-md-2">
+                    <label for="firstname" class="form-label">First Name</label>
+                  </div>
+                  <div class="col-sm-10 col-md-10">
+                    <input type="text" class="form-control border-dark" id="firstname" placeholder="John">
+                  </div>
+                </div>
+
+                <div class="row mb-3">
+                  <div style="display:flex; align-items: center;" class="col-sm-2 col-md-2">
+                    <label for="lastname" class="form-label">Last Name</label>
+                  </div>
+                  <div class="col-sm-10 col-md-10">
+                    <input type="text" class="form-control border-dark" id="lastname" placeholder="Smith">
+                  </div>
+                </div>
+            
+                <h3 class="mb-3">Address:</h3>
+                <div class="row mb-3">
+                  <div style="display:flex; align-items: center;" class="col-sm-2 col-md-2">
+                    <label for="address1" class="form-label">line 1</label>
+                  </div>
+                  <div class="col-sm-10 col-md-10">
+                    <input type="text" class="form-control border-dark" id="address1" placeholder="Address line 1">
+                  </div>                
+                </div>
+                <div class="row mb-3">
+                  <div style="display:flex; align-items: center;" class="col-sm-2 col-md-2">
+                    <label for="address2" class="form-label">line 2</label>
+                  </div>
+                  <div class="col-sm-10 col-md-10">
+                    <input type="text" class="form-control border-dark" id="address2" placeholder="Address line 2">
+                  </div>
+                </div>
+
+                <div class="row mb-3">
+                  <div style="display:flex; align-items: center;" class="col-sm-2 col-md-2">
+                    <label for="towncity" class="form-label">Town/City</label>
+                  </div>
+                  <div class="col-sm-10 col-md-10">
+                    <input type="text" class="form-control border-dark" id="towncity" placeholder="Town/City">
+                  </div>
+                </div>
+
+                <div class="mb-3 row">
+                  <div class="col-sm-2 col-md-2">
+                    <h4>Gender:</h4>
+                  </div>
+                  <div style="display:flex; align-items: center;" class="col-sm-10 col-md-10">
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input border-dark" type="radio" name="Gender" id="Male" value="option1">
+                      <label class="form-check-label" for="Male">Male</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input border-dark" type="radio" name="Gender" id="Female" value="option2">
+                      <label class="form-check-label" for="Female">Female</label>
+                    </div>
+                    <div class="form-check form-check-inline border-dark">
+                      <input class="form-check-input border-dark" type="radio" name="Gender" id="Other" value="option3">
+                      <label class="form-check-label" for="Other">Other</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="mb-3 row">
+                  <div class="col-sm-2 col-md-2">
+                    <h4>Phone:</h4>
+                  </div>
+                  <div style="display:flex; align-items: center;" class="col-sm-10 col-md-10">
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input border-dark" type="radio" name="phone" id="Windows" value="option1">
+                      <label class="form-check-label" for="Windows">Windows</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input border-dark" type="radio" name="phone" id="Apple" value="option2">
+                      <label class="form-check-label" for="Apple">Apple</label>
+                    </div>
+                    <div class="form-check form-check-inline border-dark">
+                      <input class="form-check-input border-dark" type="radio" name="phone" id="Android" value="option3">
+                      <label class="form-check-label" for="Android">Android</label>
+                    </div>
+                    <div class="form-check form-check-inline border-dark">
+                      <input class="form-check-input border-dark" type="radio" name="phone" id="Other" value="option4">
+                      <label class="form-check-label" for="Other">Other</label>
+                    </div>
+                  </div>
+                </div>
+                <select class="form-select mb-3 border-dark" aria-label="Default select example">
+                  <option selected>Mobile Provider</option>
+                  <option value="1">None</option>
+                  <option value="2">Spark</option>
+                  <option value="3">Vodafone</option>
+                  <option value="4">Now</option>
+                  <option value="5">Other</option>
+                </select>
+
+                <div class="mb-3">
+                  <label for="comment" class="form-label">Do you use your phone for study? Please explain:</label>
+                  <textarea class="form-control border-dark" id="comment" rows="8"></textarea>
+                </div>
+                
+                <div class="row mb-3">
+                  <input class="form-control border-dark mb-3" type="submit" name="submit" value="SUBMIT"/>
+                  <input class="form-control border-dark" type="reset" name="reset" value="RESET"/>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="accordion accordion-flush" id="accordionFlushExample">
+      
+    </div>
+  </section>
+
+
+
+
+</body>
+</html>

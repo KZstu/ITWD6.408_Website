@@ -1,0 +1,92 @@
+#Navbarr{
+  background: linear-gradient(rgba(208,231,207,1) 0%, rgba(144,196,116,1) 100%);
+
+}
+
+#heroo{
+    background-image: url("hero.jpg");
+    background-size: 100%;
+    background-repeat: none;
+    background-position: center;
+    background-size: cover;
+    height:600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#herotext{
+    background-color: rgba(0,0,0,0.6); /* Black w/opacity/see-through */
+    color: white;
+    font-weight: bold;
+    border: 3px solid #f1f1f1;
+    z-index: 2;
+    width: 80%;
+    padding: 20px;
+    text-align: center;
+}
+
+.flip-box {
+    background-color: transparent;
+    height: 350px;
+    perspective: 1000px;
+  }
+  
+  .flip-box-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  .flip-box:hover .flip-box-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .flip-box-front, .flip-box-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  
+  .flip-box-front {
+    background-color: #bbb !important;
+    color: black;
+  }
+  
+  .flip-box-back {
+    background-color: dodgerblue !important;
+    color: white;
+    transform: rotateY(180deg);
+  }
+
+  .accordion-button:not(.collapsed)::after,
+.accordion-button::after {
+  background-image: unset !important;
+}
+.no-transition {
+  transition: none;
+}
+
+.btn-circle.btn-xl {
+  width: 70px;
+  height: 70px;
+  padding: 10px 16px;
+  border-radius: 35px;
+  font-size: 24px;
+  line-height: 1.33;
+}
+
+.btn-circle {
+  width: 30px;
+  height: 30px;
+  padding: 6px 0px;
+  border-radius: 15px;
+  text-align: center;
+  font-size: 12px;
+  line-height: 1.42857;
+}

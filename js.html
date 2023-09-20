@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Demo</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav id="Navbarr" class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">ITWD6.408</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="forms.html">Forms</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="xmljson.html">XML/JSON</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="js.html">Javascript</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="research.html">Research</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    
+<section style="padding-top: 15px;"id="formss" class="container-fluid">
+  <div class="row accordion accordion-flush" id="accordionFlushExample">  
+    <div class="col-lg-2 col-sm-12 pb-4">
+      <div class="card card-body accordion-body">
+        <div style="background-color: transparent; border: none;" class="row accordion-item">
+          <div class="col-sm-6 col-xs-6 col-lg-12">
+            <h2 class="accordion-header" id="flush-headingOne">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#Customize" aria-expanded="true" aria-controls="flush-collapseOne">
+                Customize
+              </button>
+            </h2>
+          </div>
+          <div class="col-sm-6 col-xs-6 col-lg-12">
+            <h2 class="accordion-header" id="flush-headingTwo">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#Slideshow" aria-expanded="true" aria-controls="flush-collapseTwo">
+                Slideshow
+              </button>
+            </h2>
+          </div>
+          <div class="col-sm-6 col-xs-6 col-lg-12">
+            <h2 class="accordion-header" id="flush-headingTwo">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#Dropdown" aria-expanded="true" aria-controls="flush-collapseTwo">
+                Dropdown
+              </button>
+            </h2>
+          </div>
+          <div class="col-sm-6 col-xs-6 col-lg-12">
+            <h2 class="accordion-header" id="flush-headingTwo">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#Vote" aria-expanded="true" aria-controls="flush-collapseTwo">
+                Vote
+              </button>
+            </h2>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-10 col-sm-12 col-xs-12">
+        <div style="background-color: transparent; border: none;" class="accordion-item">
+        <div id="Customize" class=" accordion-collapse collapse show ps-5 pe-5 no-transition" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+          <div class="card card-body accordion-body">
+            <h2>Customize the Webpage: </h2>
+            <label>Select Text Size: </label>
+            <select style="max-width: 100%; width: 350px;" class="form-select form-select-sm" id="text-size" onchange="customizeText()">  
+                <option value="16px">Normal</option>
+                <option value="25px">Big</option>
+                <option value="35px">Giant</option>       
+            </select>
+            
+            <br>
+            <label>Select color: </label>
+            <select style="max-width: 100%; width: 350px;" class="form-select form-select-sm" id="colorOption" onchange="changeColor()">
+                <option>White</option>
+                <option value="#bf5050">Red</option>
+                <option value="#59ba50">Green</option>
+                <option value="#f0eb62">Yellow</option>
+                <option value="#e3e3c5">Ivory</option>
+                <option value="#db81cc">Pink</option>
+                <option value="#8f4fbd">Purple</option>
+            </select>                   
+            
+            
+            <br><br>
+            <p id="abstract">"Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."<br>
+                "There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain..."
+            </p>
+            <script>
+              //WEB PAGE CUSTOMIZATION
+
+              //Change text size
+              function customizeText() {
+                  let selectedTextSize = document.getElementById("text-size").value;
+                  document.getElementById("abstract").style.fontSize = selectedTextSize;
+                  document.getElementById("detailed").style.fontSize = selectedTextSize;
+              }
+
+              //Change background color       
+              function changeColor() {
+                  let selectedBGColor = document.getElementById("colorOption").value;
+                  document.body.style.backgroundColor = selectedBGColor;
+              }
+
+            </script>
+          </div>
+        </div>
+        <div style="background-color: transparent; border: none;" class="accordion-item">
+          <div id="Slideshow" class="accordion-collapse collapse ps-5 pe-5" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+            <div class="card card-body accordion-body">
+              <h1 style="font-size: 2.5em; padding-bottom: 10px;">Slideshow</h1>
+              <section style="display: flex; align-items: center; justify-content: space-between;" class="container">
+                <button style="background: linear-gradient(rgba(208,231,207,1) 0%, rgba(144,196,116,1) 100%);" type="button" class="btn btn-light btn-circle btn-xl" onclick="previousSlide()"><img style="max-width: 40px; max-height: 40px;" src="left.png">
+                </button>
+                <div style="display: flex; width: 100%; flex-direction: column;">
+                  <h4 style="padding-left: 5%;" id="manual-slide-Name">The HP 3721 InkJet Printer</h4>
+                  <div style="padding-left: 5%; padding-right: 10%;" class="row">
+                    <div class="col col-lg-6 col-md-12"><img id="manual-slide-image" src="printer0.jpg" height="300px"></div>
+                    <div class="col col-lg-6 col-md-12"> <p style="padding-left:5%; padding-top:20px;" id="manual-slide-Desc">Print/Scan/Copy/Wifi<br>Worlds Smallest All-In-One Printer for Home<br>Scroll Scanner<br>Ink: 65/65XL<br>Colour/Black: 5/15 ppm<br>15 sec Black, 18 sec Colour<br>‎<br>‎<br>‎<br>‎</p></div>
+                  </div>
+                   
+                </div>
+                <button style="background: linear-gradient(rgba(208,231,207,1) 0%, rgba(144,196,116,1) 100%);" type="button" class="btn btn-light btn-circle btn-xl" onclick="nextSlide()"><img style="max-width: 40px; max-height: 40px;" src="right.png">
+                </button>
+              </section>
+              
+              <section style="display: flex; align-items: center;" class="container">
+                <div style="width: 70px; height: 70px;"></div>
+                <div style="width: 100%;">
+                  <h4 id="auto-slide-Name">The HP 3721 InkJet Printer</h4>
+                  <div style="padding-left: 5%; padding-right: 10%;" class="row">
+                    <div class="col col-lg-6 col-md-12"><img id="auto-slide-image" src="printer0.jpg" height="300px"></div>
+                    <div class="col col-lg-6 col-md-12"><p style="padding-left:5%; padding-top:20px;" id="auto-slide-Desc">Print/Scan/Copy/Wifi<br>Worlds Smallest All-In-One Printer for Home<br>Scroll Scanner<br>Ink: 65/65XL<br>Colour/Black: 5/15 ppm<br>15 sec Black, 18 sec Colour<br>‎<br>‎<br>‎<br>‎</p></div>
+                  </div>
+                </div>
+                <div style="width: 70px; height: 70px;"></div>
+              </section>
+              <script>
+                //Data: assume we have a list of top 5 printers
+                let topprinters = [{id: 0, Name: "The HP 3721 InkJet Printer", Desc: "Print/Scan/Copy/Wifi<br>Worlds Smallest All-In-One Printer for Home<br> Scroll Scanner<br>Ink: 65/65XL<br>Colour/Black: 5/15 ppm<br>15 sec Black, 18 sec Colour<br>‎<br>‎<br>‎<br>‎", image_url: "printer0.jpg"},
+                          {id: 1, Name: "Epson EcoTank ET-2850 All-in-One Printer ", Desc: "Print/Copy/Scan<br>1.44'' LCD<br>Auto 2-sided print<br>100-sheet paper capacity<br>Wireless<br>Wi-Fi Direct<br>Print up to 6,500 pages black/5,200 colour<br>Exclusive auto-stop ink bottles<br>Borderless photo printing (A4)<br>‎", image_url: "printer1.jpg"},
+                          {id: 2, Name: "Canon PIXMA G3620 Megatank Printer", Desc: "Print (up to A4), copy, scan, WiFi<br>Borderless printing<br>Print from your smartphone or tablet<br>No-squeeze ink refill system - ink filling stops automatically<br>Refilling ID technology prevents the wrong colour being refilled<br>Apple AirPrint compatible<br>Consumables: Canon GI61<br>Dimensions: 167mm (H) x 445mm (W) x 330mm (D). Weight: 7kgs<br>‎", image_url: "printer2.jpg"},
+                          {id: 3, Name: "HP MFP M283FDW Colour LaserJet Pro", Desc: "2sided print (up to A4), copy, scan, WiFi, networkable<br>Print up to 21 pages per minute<br>Smart Tasks<br>Recommended for 15 users<br>3 year warranty<br>AllinOne toner no drums required<br>Consumables: HP 206A, 206X<br>Dimensions: 311.5mm (H), 403mm (W) x 407.4mm (D)<br>Weight: 9.88kgs<br>Toner included in the box. Manufacturer code:7KW75A", image_url: "printer3.jpg"},
+                          {id: 4, Name: "Brother HL-L3230CDW Colour Laser Printer", Desc: "Print (up to A4), WiFi<br>Print up to 24ppm<br>250 Sheet paper tray capacity<br>Print resolution: up to 2400dpi<br>Consumables: Brother TN233, TN237<br>4 year warranty<br>Includes toner in the box<br>‎<br>‎<br>‎", image_url: "printer4.jpg"},
+                          ];
+
+                //------------------------------------------------------------------------------------------------------
+                //SLIDE SHOWS
+                //Slideshow: Manual
+                let slideIndex = 0;//Initial slide = 0
+                function nextSlide() {
+                  //Change the slide_index
+                  if (slideIndex < topprinters.length - 1) {
+                    slideIndex++;
+                  } else {
+                    slideIndex = 0;
+                  }
+                //Change the image source for the img
+                document.getElementById("manual-slide-Name").innerHTML = topprinters[slideIndex].Name;
+                document.getElementById("manual-slide-Desc").innerHTML = topprinters[slideIndex].Desc;
+                document.getElementById("manual-slide-image").src = topprinters[slideIndex].image_url;  
+                }
+
+                function previousSlide() {
+                //Change the slide_index
+                  if (slideIndex > 0) {
+                    slideIndex--;
+                  } else {
+                    slideIndex = topprinters.length - 1;
+                  }
+                //Change the image source for the img
+                document.getElementById("manual-slide-Name").innerHTML = topprinters[slideIndex].Name;
+                document.getElementById("manual-slide-Desc").innerHTML = topprinters[slideIndex].Desc;
+                document.getElementById("manual-slide-image").src = topprinters[slideIndex].image_url;
+                }
+
+                //------
+                //Slideshow: Automatic
+                let autoSlideIndex = 0;//Initial slide = 0
+                function autoSlideShow() {
+                //Change the slide_index
+                  if (autoSlideIndex < topprinters.length - 1) {
+                    autoSlideIndex++;
+                  } else {
+                    autoSlideIndex = 0;
+                  }
+                //Change the image source for the img
+                document.getElementById("auto-slide-Name").innerHTML = topprinters[autoSlideIndex].Name;
+                document.getElementById("auto-slide-Desc").innerHTML = topprinters[autoSlideIndex].Desc;
+                document.getElementById("auto-slide-image").src = topprinters[autoSlideIndex].image_url;
+                //Wait 2 seconds
+                setTimeout(autoSlideShow, 2000);//Auto change slide every 2 seconds
+                }
+
+                autoSlideShow() // Call to run auto slideshow
+              </script>
+            </div>
+          </div>
+        </div>
+        <div style="background-color: transparent; border: none;" class="accordion-item">
+          <div id="Dropdown" class=" accordion-collapse collapse ps-5 pe-5" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+            <div class="card card-body accordion-body">
+              <h2>Dropdown</h2>
+              <div style="max-width: 100%; width: 350px;" class="form-group">
+                <label>Select printer: </label>
+                <select class="form-select form-select-sm" id="my-printerList" onchange="displayMyprinter()">
+                </select>
+              </div>
+              <br>
+              <section class="container">
+              <h4 id="my-printerName">The HP 3721 InkJet Printer</h4>
+              <img id="my-printerImageURL" src="printer0.jpg" height="300px">
+              <p id="my-printerDesc">Print/Scan/Copy/Wifi<br>Worlds Smallest All-In-One Printer for Home<br>Scroll Scanner<br>Ink: 65/65XL<br>Colour/Black: 5/15 ppm<br>15 sec Black, 18 sec Colour<br>‎<br>‎<br>‎<br>‎</p>
+              </section>
+              <script>
+                //------------------------------------------------------------------------------------------------------
+                //DROPDOWN MENU TO SELECT printer
+                //Populate the select "options" with all the printers in the array when the page is loaded
+                function loadMyprinters() {
+                let printerSelect = document.getElementById("my-printerList");
+                for(var i=0; i < topprinters.length; i++) {
+                //Create a new child HTML node/element as "<option>" (as a child node)
+                let node = document.createElement("option");
+                //Assign option "text content" and "value" to this new node
+                node.value = topprinters[i].id.toString();
+                node.textContent = topprinters[i].Name.toString(); 
+                //Append the above HTML node (option) to the parent node "printerList"  
+                printerSelect.appendChild(node);
+                }
+                //Set the first printer as selected option in drop-down list
+                printerSelect.selectedIndex= "0"; 
+                }
+                //call to execute this function when loading the webpage
+                loadMyprinters();
+
+                //When user select an option in the dropdown menu (select), display that option
+                function displayMyprinter() {
+                //Get the selected printer "option value"
+                let selectedprinterIndex = document.getElementById("my-printerList").value; 
+                document.getElementById("my-printerName").innerHTML = topprinters[selectedprinterIndex].Name;
+                document.getElementById("my-printerDesc").innerHTML = topprinters[selectedprinterIndex].Desc;
+                document.getElementById("my-printerImageURL").src = topprinters[selectedprinterIndex].image_url;
+                }
+
+              </script>
+
+            </div>
+          </div>
+        </div>
+
+        <div style="background-color: transparent; border: none;" class="accordion-item">
+          <div id="Vote" class=" accordion-collapse collapse ps-5 pe-5" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+            <div class="card card-body accordion-body">
+              <h2>Vote</h2>
+                <section class="container">
+                <h4 id="my-printerName">The HP 3721 InkJet Printer</h4>
+                <img id="my-printerImageURL" src="printer0.jpg" height="300px">
+                <p id="my-printerDesc">Print/Scan/Copy/Wifi<br>Worlds Smallest All-In-One Printer for Home<br>Scroll Scanner<br>Ink: 65/65XL<br>Colour/Black: 5/15 ppm<br>15 sec Black, 18 sec Colour</p>
+                <br>
+                <button id="likeButton" class="btn btn-light" onclick="like()">&#128077;</button>
+                <p id="likeNumber" style="display: inline-block;">0</p>
+                <button id="dislikeButton" class="btn btn-light" onclick="dislike()">&#128078;</button>
+                <p id="dislikeNumber" style="display: inline-block;">0</p>
+                </section>
+                <script>
+                  //------------------------------------------------------------------------------------------------------
+                  //VOTE: LIKE / DISLIKE
+                  //Assume the current Votes are: 20 likes and 5 dislikes
+                  let currentVotes = {like: 20, dislike: 5};
+
+                  //Load the current votes to HTML page
+                  document.getElementById("likeNumber").innerHTML = currentVotes.like;
+                  document.getElementById("dislikeNumber").innerHTML = currentVotes.dislike;
+
+                  //Variables to track the clicking status
+                  //RULE: Allow to vote only one: UP or DOWN
+                  let voteStatus = {like: false, dislike: false};
+
+                  //Click Like button
+                  function like() {
+                    //Check current status of "like" button (has been clicked or not)
+                    if (voteStatus.like == false) {
+                      //Increase a "Like": Increase the like number by 1
+                      document.getElementById("likeNumber").innerHTML = currentVotes.like + 1;
+                      //Change the background color of Like button to GREEN
+                      document.getElementById("likeButton").style.backgroundColor = "green";
+                      //Change the current status of "like" button: has been clicked
+                      voteStatus.like = true;//
+
+                    //Check "dislike" status - if dislike has been voted, down it by one & change status to False & change background color to white
+                      if (voteStatus.dislike == true) {
+                        document.getElementById("dislikeNumber").innerHTML = currentVotes.dislike;
+                        voteStatus.dislike = false;//
+                        document.getElementById("dislikeButton").style.backgroundColor = "white";
+                      }
+
+                    } else {
+                      //Keep the current number of like
+                      document.getElementById("likeNumber").innerHTML = currentVotes.like;
+                      //Change the background color of Like button to WHITE
+                      document.getElementById("likeButton").style.backgroundColor = "white";
+                      //Change the current status of "like" button
+                      voteStatus.like = false;//has been clicked  
+                    } 
+                  } 
+
+                  //Click Dislike button
+                  function dislike() {
+                    //Check current status of "dislike" button (has been clicked or not)
+                    if (voteStatus.dislike == false) {
+                      //Increase a "disLike"  by 1
+                      document.getElementById("dislikeNumber").innerHTML = currentVotes.dislike + 1;
+                      //Change the background color of Like button to GREEN
+                      document.getElementById("dislikeButton").style.backgroundColor = "green";
+                      //Change the current status of "dislike" button
+                      voteStatus.dislike = true;//has been clicked
+
+                      //Check "like" status - if like has been voted, down it by one & change status to False & change background color to white
+                      if (voteStatus.like == true) {
+                        document.getElementById("likeNumber").innerHTML = currentVotes.like;
+                        voteStatus.like = false;//
+                        document.getElementById("likeButton").style.backgroundColor = "white";
+                      }
+                    
+                    } else {
+                      //Keep the current number of of "dislike"
+                      document.getElementById("dislikeNumber").innerHTML = currentVotes.dislike;
+                      //Change the background color of disLike button to WHITE
+                      document.getElementById("dislikeButton").style.backgroundColor = "white";
+                      //Change the current status of "dislike" button
+                      voteStatus.dislike = false;//has been clicked 
+                    } 
+                  } 
+                </script>
+            </div>
+          </div>
+        </div>
+
+    </div>
+  </div>
+</body>
+</html>
